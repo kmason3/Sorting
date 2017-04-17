@@ -1,30 +1,48 @@
 package sorting;
 
 
+
 public class Node {
-	private String data;
+	private String element;
+	private Node prev;
 	private Node next;
 
-	public Node() {
-
-		this.setData(null);
-		this.setNext(null);
-
-	}
-
 	public Node(String input) {
-
-		this.setData(input);
-		this.setNext(null);
-
+		this.element = input;
 	}
 
-	public String getData() {
-		return data;
+	/**
+	 * constructor for node
+	 * 
+	 * @param String
+	 *            element
+	 * @param Node
+	 *            previous
+	 * @param Node
+	 *            next
+	 */
+	public Node(String input, Node p, Node n) {
+		setElement(input);
+		setPrev(p);
+		setNext(n);
 	}
 
-	public void setData(String data) {
-		this.data = data;
+	// getters and setters
+	public String getElement() {
+
+		return element;
+	}
+
+	public void setElement(String element) {
+		this.element = element;
+	}
+
+	public Node getPrev() {
+		return prev;
+	}
+
+	public void setPrev(Node prev) {
+		this.prev = prev;
 	}
 
 	public Node getNext() {
@@ -35,12 +53,4 @@ public class Node {
 		this.next = next;
 	}
 
-	public void print() {
-		System.out.println(this.data);
-
-	}
-
 }
-
-
-
