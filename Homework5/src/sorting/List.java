@@ -65,6 +65,16 @@ public class List {
 		this.add(n);
 	}
 
+	public void fillList(int total) {
+
+		for (int i = 1; i <= total; i++) {
+
+			this.addRandom();
+
+		}
+
+	}
+
 	public int size() {
 		return size;
 	}
