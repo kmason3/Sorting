@@ -10,7 +10,7 @@ public class List {
 	private Node head = null;
 
 	/**
-	 * Empty Constuctor
+	 * Empty Constructor
 	 */
 	public List() {
 		
@@ -29,7 +29,7 @@ public class List {
 	 * @param node
 	 */
 	public void add(Node node) {
-
+		//if list is empty add node to front of list
 		if (isEmpty()) {
 
 			head = node;
@@ -37,13 +37,13 @@ public class List {
 			return;
 		}
 
-		Node temp = head;
-
-		while (temp.getNext() != null) {
-			temp = temp.getNext();
+		Node current = head;
+		
+		while (current.getNext() != null) {
+			current = current.getNext();
 		}
 
-		temp.setNext(node);
+		current.setNext(node);
 		size++;
 
 	}
@@ -63,13 +63,13 @@ public class List {
 			return;
 		}
 
-		Node temp = head;
+		Node current = head;
 
-		while (temp.getNext() != null) {
-			temp = temp.getNext();
+		while (current.getNext() != null) {
+			current = current.getNext();
 		}
 
-		temp.setNext(node);
+		current.setNext(node);
 		size++;
 
 	}
@@ -152,18 +152,18 @@ public class List {
 			System.out.println("List is empty");
 		}
 
-		Node temp = head;
+		Node current = head;
 
-		while (temp != null) {
+		while (current != null) {
 
-			if (temp.getNext() != null) {
-				System.out.print(temp.getElement() + ",");
+			if (current.getNext() != null) {
+				System.out.print(current.getElement() + ",");
 			} else {
-				System.out.print(temp.getElement());
+				System.out.print(current.getElement());
 				System.out.println();
 			}
 
-			temp = temp.getNext();
+			current = current.getNext();
 		}
 	}
 
