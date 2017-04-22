@@ -37,6 +37,7 @@ public class List {
 			return;
 		}
 
+		// if list is not empty, adds to end of list
 		Node current = head;
 		
 		while (current.getNext() != null) {
@@ -53,24 +54,11 @@ public class List {
 	 * @param input
 	 */
 	public void add(int input) {
-
+		//creates 
 		Node node = new Node(input);
-
-		if (isEmpty()) {
-
-			head = node;
-			size++;
-			return;
-		}
-
-		Node current = head;
-
-		while (current.getNext() != null) {
-			current = current.getNext();
-		}
-
-		current.setNext(node);
-		size++;
+		
+		this.add(node);
+		
 
 	}
 	

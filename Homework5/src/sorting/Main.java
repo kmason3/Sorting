@@ -12,6 +12,14 @@ public class Main {
 		test.bubbleSort();
 		System.out.println("Sorted:");
 		test.print();
+		
+		List test2 = new List();
+		
+		test2.add(10);
+		test2.add(5);
+		test2.add(1);
+		
+		test2.print();
 	}
 
 }
