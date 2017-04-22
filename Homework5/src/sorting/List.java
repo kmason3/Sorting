@@ -3,18 +3,31 @@ package sorting;
 import java.util.Random;
 
 public class List {
+	
+	//Private variables
 
 	private int size = 0;
 	private Node head = null;
 
+	/**
+	 * Empty Constuctor
+	 */
 	public List() {
-
+		
+		head = null;
+		
 	}
-
+	/**
+	 * Checks is list is empty
+	 * @return boolean
+	 */
 	public boolean isEmpty() {
 		return size == 0;
 	}
-
+	/**
+	 * Adds node
+	 * @param node
+	 */
 	public void add(Node node) {
 
 		if (isEmpty()) {
@@ -35,6 +48,10 @@ public class List {
 
 	}
 
+	/**
+	 * adds node with int input
+	 * @param input
+	 */
 	public void add(int input) {
 
 		Node node = new Node(input);
@@ -56,7 +73,10 @@ public class List {
 		size++;
 
 	}
-
+	
+	/**
+	 * adds random number between 1 and 50
+	 */
 	public void addRandom() {
 		Random rand = new Random();
 
@@ -64,10 +84,15 @@ public class List {
 
 		this.add(n);
 	}
+	
+	/**
+	 * fills list to user defined size
+	 * @param total
+	 */
 
-	public void fillList(int total) {
+	public void fillList(int listSize) {
 
-		for (int i = 1; i <= total; i++) {
+		for (int i = 1; i <= listSize; i++) {
 
 			this.addRandom();
 
@@ -75,6 +100,9 @@ public class List {
 
 	}
 
+	/**
+	 * sorts list using bubble sort algorithm
+	 */
 	public void bubbleSort() {
 		if (isEmpty()) {
 			System.out.println("List is Empty!");
@@ -115,6 +143,9 @@ public class List {
 		return size;
 	}
 
+	/**
+	 * prints list
+	 */
 	public void print() {
 
 		if (isEmpty()) {
