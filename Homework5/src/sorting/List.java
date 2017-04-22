@@ -75,6 +75,42 @@ public class List {
 
 	}
 
+	public void bubbleSort() {
+		if (isEmpty()) {
+			System.out.println("List is Empty!");
+		}
+		if (size == 1) {
+			System.out
+					.println("List only contains one item, so, you know, it's already sorted!");
+		}
+
+		boolean swapped = true;
+		Node current = this.head;
+
+		while (swapped) {
+
+			swapped = false;
+
+			while (current != null) {
+
+				if (current.getNext() != null
+						&& current.getElement() > current.getNext()
+								.getElement()) {
+
+					int temp = current.getElement();
+					current.setElement(current.getNext().getElement());
+					current.getNext().setElement(temp);
+
+					swapped = true;
+
+				}
+				current = current.getNext();
+
+			}
+			current = this.head;
+		}
+	}
+
 	public int size() {
 		return size;
 	}
