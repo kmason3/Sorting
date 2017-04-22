@@ -3,23 +3,23 @@ package sorting;
 public class Main {
 
 	public static void main(String[] args) {
+		// creates new empty list
 		List test = new List();
-		System.out.println("Unsorted:");
+
+		// fills list to specified size
 		test.fillList(10);
 
+		// prints unsorted list
+		System.out.println("Unsorted:");
 		test.print();
 
+		// sorts list
 		test.bubbleSort();
+
+		// prints sorted list
 		System.out.println("Sorted:");
 		test.print();
-		
-		List test2 = new List();
-		
-		test2.add(10);
-		test2.add(5);
-		test2.add(1);
-		
-		test2.print();
+
 	}
 
 }
