@@ -1,5 +1,7 @@
 package sorting;
 
+import java.util.Random;
+
 public class List {
 
 	private int size = 0;
@@ -53,6 +55,14 @@ public class List {
 		temp.setNext(node);
 		size++;
 
+	}
+
+	public void addRandom() {
+		Random rand = new Random();
+
+		int n = rand.nextInt(50) + 1;
+
+		this.add(n);
 	}
 
 	public int size() {
